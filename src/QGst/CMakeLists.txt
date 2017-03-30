@@ -25,7 +25,7 @@ set(QtGStreamer_SRCS
     query.cpp
     clock.cpp
     allocator.cpp
-    memory.cpp
+    memoryQGst.cpp
     buffer.cpp
     event.cpp
     clocktime.cpp
@@ -88,7 +88,7 @@ set(QtGStreamer_INSTALLED_HEADERS
     buffer.h            Buffer
     sample.h            Sample
     allocator.h         Allocator
-    memory.h            Memory
+    memoryQGst.h        MemoryQGst
     event.h             Event
     clocktime.h         ClockTime
     taglist.h           TagList

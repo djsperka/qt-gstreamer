@@ -324,7 +324,7 @@ namespace QGst {
   }
 } //namespace QGst
 
-#include "QGst/memory.h"
+#include "QGst/memoryQGst.h"
 
 REGISTER_TYPE_IMPLEMENTATION(QGst::Memory,GST_TYPE_MEMORY)
 
