@@ -18,6 +18,8 @@
 #define QGST_PAD_H
 
 #include "object.h"
+#include "clocktime.h"
+#include <gst/gstpad.h>
 
 namespace QGst {
 
@@ -56,6 +58,11 @@ public:
 
     bool query(const QueryPtr & query);
     bool sendEvent(const EventPtr & event);
+
+    unsigned long addProbe(GstPadProbeType type, GstPadProbeCallback callback, gpointer user_data);
+    void removeProbe(unsigned long id);
+
+    void setOffset(ClockTime t);
 };
 
 }

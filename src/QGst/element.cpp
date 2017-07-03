@@ -176,4 +176,10 @@ bool Element::seek(Format format, SeekFlags flags, quint64 position)
                                    static_cast<GstSeekFlags>(static_cast<int>(flags)), position);
 }
 
+ClockTime Element::getBaseTime() const
+{
+	return ClockTime(gst_element_get_base_time(object<GstElement>()));
+}
+
+
 }

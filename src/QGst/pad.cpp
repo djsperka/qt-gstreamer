@@ -114,4 +114,27 @@ bool Pad::sendEvent(const EventPtr &event)
     return gst_pad_send_event(object<GstPad>(), event);
 }
 
+unsigned long Pad::addProbe(GstPadProbeType type, GstPadProbeCallback callback, gpointer user_data)
+{
+	return gst_pad_add_probe(
+			object<GstPad>(),
+			type,
+			callback,
+			user_data,
+			NULL);
+}
+
+void Pad::removeProbe(unsigned long id)
+{
+	gst_pad_remove_probe(object<GstPad>(), id);
+	return;
+}
+
+
+
+void Pad::setOffset(ClockTime t)
+{
+	gst_pad_set_offset(object<GstPad>(), (quint64)t);
+}
+
 }

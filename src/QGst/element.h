@@ -61,6 +61,9 @@ public:
               const CapsPtr & filter = CapsPtr());
     bool link(const ElementPtr & dest, const CapsPtr & filter = CapsPtr());
 
+    // djs get element base time
+    ClockTime getBaseTime() const;
+
 #ifndef DOXYGEN_RUN
     //FIXME-0.11 Remove the default NULL parameter from the first version
     //and remove entirely sinkPadName from the second version
